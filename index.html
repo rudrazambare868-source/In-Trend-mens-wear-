@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Discover premium men's fashion at In Trend Mens Wear, Jamner Road, Bhusawal. Explore shirts, jeans, trousers, jackets and more.">
+  <title>In Trend Mens Wear | Premium Men's Fashion</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #11110f;
+      --dark: #191916;
+      --gold: #c7a66a;
+      --cream: #f6f2e9;
+      --white: #fffdf8;
+      --muted: #aaa69d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 85px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .announcement {
+      background: var(--gold);
+      color: #17140e;
+      text-align: center;
+      padding: 9px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    header {
+      background: var(--black);
+      color: white;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #33312a;
+    }
+
+    .navbar {
+      max-width: 1240px;
+      margin: auto;
+      padding: 17px 5%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-mark {
+      width: 44px;
+      height: 44px;
+      border: 1px solid var(--gold);
+      display: grid;
+      place-items: center;
+      color: var(--gold);
+      font-family: 'Playfair Display', serif;
+      font-size: 23px;
+    }
+
+    .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 19px;
+      letter-spacing: 1px;
+      line-height: 1.2;
+    }
+
+    .brand-name span {
+      display: block;
+      font: 10px 'DM Sans', sans-serif;
+      letter-spacing: 4px;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    nav a {
+      font-size: 12px;
+      color: #e4e0d8;
+      transition: color .25s;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .nav-contact {
+      border: 1px solid var(--gold);
+      padding: 10px 16px;
+      color: var(--gold);
+    }
+
+    .menu-toggle {
+      display: none;
+      background: transparent;
+      border: 1px solid #555;
+      color: white;
+      padding: 7px 12px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 610px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      color: white;
+      background:
+        linear-gradient(90deg, rgba(13,13,12,.94) 0%,
+        rgba(13,13,12,.74) 45%, rgba(13,13,12,.14) 100%),
+        url('https://images.unsplash.com/photo-1617137968427-85924c800a22?auto=format&fit=crop&w=2000&q=85')
+        center 38% / cover no-repeat;
+    }
+
+    .hero-content {
+      max-width: 1240px;
+      width: 100%;
+      padding: 90px 5%;
+      margin: auto;
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: clamp(44px, 6.5vw, 78px);
+      line-height: 1.12;
+      margin: 25px 0;
+      max-width: 700px;
+    }
+
+    .hero h1 em {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    .hero p {
+      color: #e0ddd6;
+      max-width: 460px;
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 14px 23px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: .25s;
+      border: 1px solid transparent;
+      cursor: pointer;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: #17140e;
+    }
+
+    .btn-gold:hover {
+      background: #e0c18a;
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border-color: #b9b6ae;
+      color: white;
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    .features {
+      background: var(--cream);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding: 28px 5%;
+      gap: 22px;
+    }
+
+    .feature {
+      text-align: center;
+      border-right: 1px solid #ded7c9;
+      padding: 4px 12px;
+    }
+
+    .feature:last-child {
+      border: 0;
+    }
+
+    .feature-icon {
+      color: #987541;
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .feature h3 {
+      font-size: 16px;
+      margin-bottom: 3px;
+    }
+
+    .feature p {
+      color: #777167;
+      font-size: 11px;
+    }
+
+    .section {
+      padding: 95px 5%;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 650px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading .eyebrow {
+      justify-content: center;
+    }
+
+    .section-heading .eyebrow::after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .section-heading h2 {
+      font-size: clamp(34px, 4vw, 48px);
+      margin: 14px 0;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      color: #77736c;
+      font-size: 14px;
+    }
+
+    .collections {
+      background: var(--white);
+    }
+
+    .collection-grid {
+      max-width: 1240px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .collection-card {
+      position: relative;
+      overflow: hidden;
+      background: #eee9df;
+      min-width: 0;
+    }
+
+    .collection-card img {
+      display: block;
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      transition: transform .6s;
+    }
+
+    .collection-card:hover img {
+      transform: scale(1.05);
+    }
+
+    .collection-info {
+      padding: 22px 20px 24px;
+      background: var(--cream);
+      position: relative;
+    }
+
+    .collection-info h3 {
+      font-size: 25px;
+      margin-bottom: 4px;
+    }
+
+    .collection-info p {
+      font-size: 12px;
+      color: #77736c;
+    }
+
+    .collection-info a {
+      display: inline-block;
+      margin-top: 15px;
+      color: #896b36;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 4px;
+    }
+
+    .about {
+      background: var(--black);
+      color: white;
+    }
+
+    .about-inner {
+      max-width: 1160px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-image {
+      position: relative;
+    }
+
+    .about-image img {
+      display: block;
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .about-image::after {
+      content: "";
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      right: -16px;
+      bottom: -16px;
+      border: 1px solid var(--gold);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .about-image img {
+      position: relative;
+      z-index: 1;
+    }
+
+    .about-copy .eyebrow {
+      margin-bottom: 20px;
+    }
+
+    .about-copy h2 {
+      font-size: clamp(35px, 4vw, 48px);
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+
+    .about-copy h2 em {
+      color: var(--gold);
+    }
+
+    .about-copy p {
+      color: #bdb9b0;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .about-list {
+      margin: 25px 0 30px;
+      list-style: none;
+    }
+
+    .about-list li {
+      margin: 12px 0;
+      font-size: 13px;
+      color: #e5e1d8;
+    }
+
+    .about-list li span {
+      color: var(--gold);
+      margin-right: 10px;
+    }
+
+    .visit {
+      background: var(--cream);
+    }
+
+    .visit-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .visit-card {
+      background: var(--white);
+      padding: 30px 24px;
+      border: 1px solid #e9e2d6;
+    }
+
+    .visit-card .icon {
+      font-size: 27px;
+      color: #a18046;
+      margin-bottom: 12px;
+    }
+
+    .visit-card h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+    }
+
+    .visit-card p {
+      color: #77736c;
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+
+    .visit-card a:not(.btn) {
+      color: #886a35;
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    .visit-card .btn {
+      margin-top: 16px;
+      padding: 11px 13px;
+      font-size: 10px;
+    }
+
+    .contact-banner {
+      background: var(--gold);
+      padding: 55px 5%;
+      text-align: center;
+      color: #19150e;
+    }
+
+    .contact-banner h2 {
+      font-size: clamp(31px, 4vw, 45px);
+      margin-bottom: 12px;
+    }
+
+    .contact-banner p {
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
+    .btn-dark {
+      background: var(--black);
+      color: white;
+    }
+
+    .btn-dark:hover {
+      background: #333;
+    }
+
+    footer {
+      background: #11110f;
+      color: white;
+      padding: 48px 5% 20px;
+    }
+
+    .footer-inner {
+      max-width: 1240px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr;
+      gap: 45px;
+      padding-bottom: 35px;
+    }
+
+    footer .brand {
+      margin-bottom: 18px;
+    }
+
+    .footer-description {
+      max-width: 330px;
+      font-size: 12px;
+      color: #aaa69d;
+    }
+
+    .footer-column h3 {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--gold);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+
+    .footer-column p,
+    .footer-column a {
+      display: block;
+      font-size: 12px;
+      color: #c4c0b8;
+      margin-bottom: 10px;
+      overflow-wrap: anywhere;
+    }
+
+    .footer-column a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #33312a;
+      padding-top: 18px;
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+      color: #969188;
+      font-size: 11px;
+    }
+
+    .footer-bottom strong {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 90;
+      right: 20px;
+      bottom: 20px;
+      background: #18794e;
+      color: white;
+      border-radius: 40px;
+      padding: 13px 19px;
+      box-shadow: 0 5px 25px #0003;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .whatsapp-float:hover {
+      background: #126640;
+    }
+
+    @media (max-width: 850px) {
+      .menu-toggle {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 22px 5%;
+        background: var(--black);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        border-top: 1px solid #333;
+      }
+
+      nav.open {
+        display: flex;
+      }
+
+      nav a {
+        padding: 5px 0;
+      }
+
+      .nav-contact {
+        text-align: center;
+      }
+
+      .hero {
+        min-height: 570px;
+        background-position: 58% center;
+      }
+
+      .collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .about-inner {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .about-image {
+        max-width: 560px;
+      }
+
+      .visit-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .announcement {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .navbar {
+        padding: 13px 5%;
+      }
+
+      .brand-name {
+        font-size: 16px;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 20px;
+      }
+
+      .hero {
+        min-height: 570px;
+        background-position: 62% center;
+      }
+
+      .hero-content {
+        padding: 65px 6%;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .hero p {
+        font-size: 13px;
+      }
+
+      .btn {
+        padding: 13px 15px;
+        font-size: 10px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px 10px;
+      }
+
+      .feature:nth-child(2) {
+        border-right: 0;
+      }
+
+      .section {
+        padding: 65px 5%;
+      }
+
+      .collection-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .collection-card img {
+        height: 350px;
+      }
+
+      .about-image img {
+        height: 360px;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 11px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="announcement">
+    In Trend Mens Wear · Elevate Your Everyday Style
+  </div>
+
+  <header>
+    <div class="navbar">
+      <a href="#home" class="brand" aria-label="In Trend Mens Wear home">
+        <div class="brand-mark">IT</div>
+        <div class="brand-name">
+          IN TREND
+          <span>MENS WEAR</span>
+        </div>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle"
+        aria-label="Toggle navigation" aria-expanded="false">
+        ☰ MENU
+      </button>
+
+      <nav id="navigation">
+        <a href="#home">Home</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About Us</a>
+        <a href="#visit">Visit Store</a>
+        <a class="nav-contact" href="tel:+919021951704">Call the Store ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="eyebrow">The Modern Gentleman</div>
+
+        <h1>
+          Dress Sharp.<br>
+          Look <em>Exceptional.</em>
+        </h1>
+
+        <p>
+          Discover a world of refined men's fashion.
+          From effortless everyday essentials to statement-making styles,
+          find the look that speaks to you at In Trend Mens Wear.
+        </p>
+
+        <div class="actions">
+          <a class="btn btn-gold" href="#collections">
+            Explore Collections ↗
+          </a>
+          <a class="btn btn-outline" href="#visit">
+            Find Our Store
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" aria-label="Store highlights">
+      <div class="feature">
+        <div class="feature-icon">✦</div>
+        <h3>Premium Style</h3>
+        <p>Fashion for every occasion</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">◇</div>
+        <h3>Modern Looks</h3>
+        <p>Classic meets contemporary</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">♧</div>
+        <h3>Everyday Wear</h3>
+        <p>Style that fits your life</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">⌖</div>
+        <h3>Local Store</h3>
+        <p>Visit us in Bhusawal</p>
+      </div>
+    </section>
+
+    <section class="section collections" id="collections">
+      <div class="section-heading">
+        <div class="eyebrow">Find Your Signature</div>
+        <h2>Explore Our Collections</h2>
+        <p>
+          Refresh your wardrobe with versatile styles for work,
+          weekends, celebrations and everything in between.
+        </p>
+      </div>
+
+      <div class="collection-grid">
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1603252110481-7ba873bf42ab?auto=format&fit=crop&w=850&q=85"
+            alt="Men's smart casual shirts"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>Shirts</h3>
+            <p>Effortless elegance, from casual to formal.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=850&q=85"
+            alt="Classic men's T-shirts"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>T-Shirts</h3>
+            <p>Everyday essentials with a modern edge.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=850&q=85"
+            alt="Men's denim jeans"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>Jeans & Trousers</h3>
+            <p>Versatile fits for your everyday wardrobe.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=850&q=85"
+            alt="Men's jackets and outerwear"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>Jackets</h3>
+            <p>Layer up and make a lasting impression.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990?auto=format&fit=crop&w=850&q=85"
+            alt="Contemporary men's casual fashion"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>Casual Wear</h3>
+            <p>Relaxed fashion for your off-duty days.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+        <article class="collection-card">
+          <img
+            src="https://images.unsplash.com/photo-1593030761757-71fae45fa0e7?auto=format&fit=crop&w=850&q=85"
+            alt="Men's formal and occasion wear"
+            loading="lazy">
+          <div class="collection-info">
+            <h3>Formal & Occasion Wear</h3>
+            <p>Look your best for life's special moments.</p>
+            <a href="tel:+919021951704">Ask About Styles ↗</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="about-inner">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern men's fashion and personal style"
+            loading="lazy">
+        </div>
+
+        <div class="about-copy">
+          <div class="eyebrow">Our Story</div>
+          <h2>Style Is Personal.<br><em>Make It Yours.</em></h2>
+
+          <p>
+            Welcome to In Trend Mens Wear, your destination for men's
+            fashion on Jamner Road, Bhusawal.
+          </p>
+
+          <p>
+            We believe that great style is about feeling confident,
+            expressing your personality and finding clothes that suit
+            your everyday life. Whether you're updating your wardrobe
+            or getting ready for a special occasion, we're here to help
+            you explore your style.
+          </p>
+
+          <ul class="about-list">
+            <li><span>✦</span> Styles for everyday and special occasions</li>
+            <li><span>✦</span> A range of men's clothing categories</li>
+            <li><span>✦</span> A convenient local shopping destination</li>
+          </ul>
+
+          <a class="btn btn-gold" href="tel:+919021951704">
+            Contact Our Store ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section visit" id="visit">
+      <div class="section-heading">
+        <div class="eyebrow">We Welcome You</div>
+        <h2>Visit In Trend Mens Wear</h2>
+        <p>
+          Stop by our store to explore men's fashion in person.
+          Call ahead if you'd like to ask about a particular style.
+        </p>
+      </div>
+
+      <div class="visit-grid">
+
+        <div class="visit-card">
+          <div class="icon">⌖</div>
+          <h3>Our Location</h3>
+          <p>Jamner Road, Bhusawal, Maharashtra, India</p>
+          <a class="btn btn-gold"
+             href="https://www.google.com/maps/search/?api=1&query=In+Trend+Mens+Wear+Jamner+Road+Bhusawal"
+             target="_blank" rel="noopener noreferrer">
+            Get Directions ↗
+          </a>
+        </div>
+
+        <div class="visit-card">
+          <div class="icon">☎</div>
+          <h3>Call Us</h3>
+          <p>Have a question about our collection? Give us a call.</p>
+          <p style="margin-top: 12px;">
+            <a href="tel:+919021951704">+91 90219 51704</a>
+          </p>
+          <a class="btn btn-gold" href="tel:+919021951704">
+            Call Now ↗
+          </a>
+        </div>
+
+        <div class="visit-card">
+          <div class="icon">✉</div>
+          <h3>WhatsApp Us</h3>
+          <p>Message us to enquire about available styles and clothing.</p>
+          <a class="btn btn-gold"
+             href="https://wa.me/919021951704?text=Hello%20In%20Trend%20Mens%20Wear%2C%20I%20would%20like%20to%20enquire%20about%20your%20collection."
+             target="_blank" rel="noopener noreferrer">
+            Start a Chat ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-banner">
+      <h2>Your Style. Your Statement.</h2>
+      <p>
+        Make your next wardrobe upgrade at In Trend Mens Wear, Bhusawal.
+      </p>
+      <a class="btn btn-dark" href="tel:+919021951704">
+        Let's Talk Fashion ↗
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+
+      <div>
+        <a href="#home" class="brand">
+          <div class="brand-mark">IT</div>
+          <div class="brand-name">
+            IN TREND
+            <span>MENS WEAR</span>
+          </div>
+        </a>
+        <p class="footer-description">
+          Discover men's fashion that brings together modern style,
+          timeless looks and everyday confidence. Visit us in Bhusawal.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <a href="#home">Home</a>
+        <a href="#collections">Our Collections</a>
+        <a href="#about">About Us</a>
+        <a href="#visit">Visit Our Store</a>
+      </div>
+
+      <div class="footer-column">
+        <h3>Get In Touch</h3>
+        <p>Jamner Road, Bhusawal, Maharashtra</p>
+        <a href="tel:+919021951704">+91 90219 51704</a>
+        <a href="https://wa.me/919021951704"
+           target="_blank" rel="noopener noreferrer">WhatsApp Us ↗</a>
+        <a href="https://www.google.com/maps/search/?api=1&query=In+Trend+Mens+Wear+Jamner+Road+Bhusawal"
+           target="_blank" rel="noopener noreferrer">Find Us on Maps ↗</a>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© <span id="year"></span> In Trend Mens Wear. All rights reserved.</p>
+      <p>Made with care by <strong>Rudra Zambare</strong></p>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float"
+     href="https://wa.me/919021951704?text=Hello%20In%20Trend%20Mens%20Wear!"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contact In Trend Mens Wear on WhatsApp">
+    ☎ WhatsApp Us
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navigation = document.getElementById('navigation');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = navigation.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navigation.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navigation.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.getElementById('year').textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
